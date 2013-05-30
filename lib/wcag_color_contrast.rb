@@ -3,7 +3,7 @@ require "wcag_color_contrast/version"
 module WCAGColorContrast
   class InvalidColorError < StandardError; end
 
-  # Helper method for WCAGColorContrast#new#ratio.
+  # Helper method for WCAGColorContrast::Ratio#new#ratio.
   def self.ratio(*args)
     Ratio.new.ratio(*args)
   end
