@@ -30,7 +30,7 @@ Pass 2 rgb colors are strings (3 or 6 characters, case insensitive):
 
 ```ruby
 require 'wcag_color_contrast'
-WCAGColorContrast.new.ratio('999', 'ffffff')
+WCAGColorContrast.ratio('999', 'ffffff')
 #=> 2.849027755287037
 ```
 
