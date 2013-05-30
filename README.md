@@ -26,7 +26,7 @@ $ gem install wcag_color_contrast
 
 ## Usage
 
-Pass 2 rgb colors are strings (3 or 6 characters, case insensitive):
+With 2 hex colors as strings (3 or 6 characters, case insensitive, no leading pound/hash sign):
 
 ```ruby
 require 'wcag_color_contrast'
