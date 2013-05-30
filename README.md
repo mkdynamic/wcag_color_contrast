@@ -1,4 +1,4 @@
-# WcagColorContrast
+# WCAGColorContrast
 
 A Ruby port of the Javascript https://github.com/doochik/wcag-color-contrast.
 
