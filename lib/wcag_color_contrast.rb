@@ -8,6 +8,10 @@ module WCAGColorContrast
     Ratio.new.ratio(*args)
   end
 
+  def self.relative_luminance(rgb)
+    Ratio.new.relative_luminance(rgb)
+  end
+
   class Ratio
     # Calculate contast ratio beetween RGB1 and RGB2.
     def ratio(rgb1, rgb2)
@@ -21,6 +25,14 @@ module WCAGColorContrast
       l2 = srgb_lightness(srgb2)
 
       l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05)
+    end
+
+    # Calculate the relative luminance for an rgb color
+    def relative_luminance(rgb)
+      raise InvalidColorError, rgb unless valid_rgb?(rgb)
+
+      srgb = rgb_to_srgba(rgb)
+      srgb_lightness(srgb)
     end
 
     private

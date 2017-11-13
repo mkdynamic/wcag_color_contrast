@@ -34,6 +34,13 @@ WCAGColorContrast.ratio('999', 'ffffff')
 #=> 2.849027755287037
 ```
 
+Can also calculate the relative luminance of a color
+
+```ruby
+WCAGColorContrast.relative_luminance('008800')
+#=> 0.17608318886144392
+```
+
 ## Contributing
 
 1. Fork it
