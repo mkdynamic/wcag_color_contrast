@@ -39,7 +39,7 @@ module WCAGColorContrast
 
     # Convert RGB color to sRGB.
     def rgb_to_srgba(rgb)
-      rgb << rgb if rgb.size == 3
+      rgb = ([rgb.split('')] * 2).transpose.join if rgb.size == 3
       [
         rgb.slice(0,2).to_i(16) / 255.0,
         rgb.slice(2,2).to_i(16) / 255.0,
